@@ -1,15 +1,17 @@
 import React from 'react';
 import './expense.css';
-const FunctionComponent = () => {
+const FunctionComponent = (props) => {
+  const ExpenseDate = new Date();
   const ExpenseTitle = 'Car insurance';
+  const ExpenseAmount = '1000';
   return (
     <div className="expense-item">
-      <h2>Date</h2>
+      <h2>{props.date.toISOString()}</h2>
       <div className="expense-item__description">
-        <h2> {ExpenseTitle}</h2>
+        <h2> {props.title}</h2>
       </div>
       <div className="expense-item__price">
-        <div> Amount </div>
+        <div> {props.amount} </div>
       </div>
     </div>
   );

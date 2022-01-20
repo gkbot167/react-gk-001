@@ -2,9 +2,40 @@ import React from 'react';
 import './style.css';
 import FunctionComponent from './functionComponent';
 export default function App() {
+  const Expense = [
+    {
+      title: 'Car Insurance',
+      amount: '1000',
+      date: new Date(),
+    },
+    {
+      title: 'Car Insurance',
+      amount: '2000',
+      date: new Date(),
+    },
+    {
+      title: 'Car Insurance',
+      amount: '3000',
+      date: new Date(),
+    },
+  ];
   return (
     <div>
-      <FunctionComponent></FunctionComponent>
+      <FunctionComponent
+        title={Expense[0].title}
+        amount={Expense[0].amount}
+        date={Expense[0].date}
+      ></FunctionComponent>
+      <FunctionComponent
+        title={Expense[1].title}
+        amount={Expense[1].amount}
+        date={Expense[1].date}
+      ></FunctionComponent>
+      <FunctionComponent
+        title={Expense[2].title}
+        amount={Expense[2].amount}
+        date={Expense[2].date}
+      ></FunctionComponent>
     </div>
   );
 }
