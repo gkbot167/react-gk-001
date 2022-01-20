@@ -1,12 +1,12 @@
 import React from 'react';
-import './expense.css';
+import './Expense.css';
 const FunctionComponent = (props) => {
-  const ExpenseDate = new Date();
-  const ExpenseTitle = 'Car insurance';
-  const ExpenseAmount = '1000';
+  const month = props.date.toLocaleString('en-UK', { month: 'long' });
+  const year = props.date.getFullYear();
+  const day = props.date.toLocaleString('en-UK', { day: '2-digit' });
   return (
     <div className="expense-item">
-      <h2>{props.date.toISOString()}</h2>
+      <ExpenseDate />
       <div className="expense-item__description">
         <h2> {props.title}</h2>
       </div>
