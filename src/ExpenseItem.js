@@ -1,9 +1,7 @@
 import React from 'react';
 import './Expense.css';
-const FunctionComponent = (props) => {
-  const month = props.date.toLocaleString('en-UK', { month: 'long' });
-  const year = props.date.getFullYear();
-  const day = props.date.toLocaleString('en-UK', { day: '2-digit' });
+import './ExpenseDate';
+const ExpenseItem = (props) => {
   return (
     <div className="expense-item">
       <ExpenseDate />
@@ -16,4 +14,4 @@ const FunctionComponent = (props) => {
     </div>
   );
 };
-export default FunctionComponent;
+export default ExpenseItem;

@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import FunctionComponent from './functionComponent';
+import ExpenseItem from './ExpenseItem';
 export default function App() {
   const Expense = [
     {
@@ -21,21 +21,21 @@ export default function App() {
   ];
   return (
     <div>
-      <FunctionComponent
+      <ExpenseItem
         title={Expense[0].title}
         amount={Expense[0].amount}
         date={Expense[0].date}
-      ></FunctionComponent>
-      <FunctionComponent
+      />
+      <ExpenseItem
         title={Expense[1].title}
         amount={Expense[1].amount}
         date={Expense[1].date}
-      ></FunctionComponent>
-      <FunctionComponent
+      />
+      <ExpenseItem
         title={Expense[2].title}
         amount={Expense[2].amount}
         date={Expense[2].date}
-      ></FunctionComponent>
+      />
     </div>
   );
 }
