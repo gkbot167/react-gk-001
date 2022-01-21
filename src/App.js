@@ -19,5 +19,5 @@ export default function App() {
       date: new Date(),
     },
   ];
-  return <Expenses />;
+  return <Expenses items={Expense} />;
 }
