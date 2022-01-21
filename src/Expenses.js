@@ -1,3 +1,4 @@
+import ExpenseItem from './ExpenseItem';
 const Expenses = (props) => {
   return (
     <div>
