@@ -1,7 +1,4 @@
-import React from 'react';
-import ExpenseItem from './ExpenseItem';
-funtion Expenses(props);
-{
+const Expenses = (props) => {
   return (
     <div>
       <ExpenseItem
@@ -21,5 +18,5 @@ funtion Expenses(props);
       />
     </div>
   );
-}
+};
 export default Expenses;
