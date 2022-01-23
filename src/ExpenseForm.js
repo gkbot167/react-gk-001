@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import NewExpense from '/.NewExpense';
 import './Expense.css';
 const ExpenseForm = () => {
   const [enteredTitle, setEnteredTitle] = useState('');
@@ -11,6 +12,7 @@ const ExpenseForm = () => {
   //});
   const TitleClickHandler = (event) => {
     setEnteredTitle(event.target.value);
+    console.log(event);
     //setUserInput({ ...userInput, enteredTitle: event.target.value });
     //setUserInput((prevState) => {
     //return { prevState, enteredTitle: event.target.value };
@@ -32,7 +34,10 @@ const ExpenseForm = () => {
       amount: enteredAmount,
       date: enteredDate,
     };
-    console.log(expensesData);
+    props.onSaveExpenses(expensesData);
+    setEnteredTitle('');
+    setEnteredAmount('');
+    setEnteredDate('');
   };
   return (
     <form onSubmit={submitHandler}>
@@ -40,7 +45,11 @@ const ExpenseForm = () => {
         <div className="new-expense__controls ">
           <label>Title</label>
           <div>
-            <input type="text" onChange={TitleClickHandler}></input>
+            <input
+              type="text"
+              value={setEnteredTitle}
+              onChange={TitleClickHandler}
+            ></input>
           </div>
         </div>
         <div className="new-expense__controls">
@@ -48,6 +57,7 @@ const ExpenseForm = () => {
           <div>
             <input
               type="number"
+              value={setEnteredAmount}
               onChange={AmountClickHandler}
               min="1"
               step="1"
@@ -59,6 +69,7 @@ const ExpenseForm = () => {
           <div>
             <input
               type="date"
+              value={setEnteredDate}
               onChange={DateClickHandler}
               min="2021-01-01"
               max="2022-12-31"
