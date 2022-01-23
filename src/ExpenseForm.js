@@ -47,7 +47,7 @@ const ExpenseForm = () => {
           <div>
             <input
               type="text"
-              value={setEnteredTitle}
+              //value={setEnteredTitle}
               onChange={TitleClickHandler}
             ></input>
           </div>
@@ -57,7 +57,7 @@ const ExpenseForm = () => {
           <div>
             <input
               type="number"
-              value={setEnteredAmount}
+              // value={setEnteredAmount}
               onChange={AmountClickHandler}
               min="1"
               step="1"
@@ -69,7 +69,7 @@ const ExpenseForm = () => {
           <div>
             <input
               type="date"
-              value={setEnteredDate}
+              //value={setEnteredDate}
               onChange={DateClickHandler}
               min="2021-01-01"
               max="2022-12-31"

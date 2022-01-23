@@ -3,12 +3,12 @@ import ExpenseForm from './ExpenseForm';
 import './NewExpense.css';
 const NewExpense = () => {
   const saveExpenseDataHandler = (enteredexpensesData) => {
-    const expensesdata={
-    ... enteredexpensesData,
-    id=Math.random().toString()
+    const expensesData = {
+      ...enteredexpensesData,
+      id: Math.random().toString(),
+    };
+    console.log(expensesData);
   };
-  console.log(expensesdata);
-};
   return (
     <div className="new-expense">
       <ExpenseForm onSaveExpenses={saveExpenseDataHandler} />

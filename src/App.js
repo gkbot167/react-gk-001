@@ -3,7 +3,7 @@ import './style.css';
 import NewExpense from './NewExpense';
 import Expenses from './Expenses';
 export default function App() {
-  const Expenses = [
+  const Expense = [
     {
       title: 'Car Insurance',
       amount: '1000',
