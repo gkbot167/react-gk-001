@@ -3,7 +3,7 @@ import './style.css';
 import NewExpense from './NewExpense';
 import Expenses from './Expenses';
 export default function App() {
-  const Expense = [
+  const Expense_gk = [
     {
       title: 'Car Insurance',
       amount: '1000',
@@ -20,11 +20,11 @@ export default function App() {
       date: new Date(),
     },
   ];
-  console.log(Expense);
+  console.log(Expense_gk);
   return (
     <div>
       <NewExpense />
-      <Expenses items={Expense} />
+      <Expenses items={Expense_gk} />
     </div>
   );
 }
