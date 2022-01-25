@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 import NewExpense from './NewExpense';
 import Expenses from './Expenses';
-export default function App() {
+function App() {
   const Expense_gk = [
     {
       title: 'Car Insurance',
@@ -29,3 +29,4 @@ export default function App() {
     </div>
   );
 }
+export default App;
