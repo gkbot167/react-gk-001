@@ -48,7 +48,6 @@ const App = () => {
         <ExpenseMonthShower />
       </div>
       <Expenses items={expenses} />
-      <ExpenseMonthShower />
     </div>
   );
 };
