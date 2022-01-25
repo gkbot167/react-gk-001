@@ -1,4 +1,4 @@
-import React from 'react';
+import React from './react';
 import ExpensesFilter from './ExpensesFilter';
 import NewExpense from './NewExpense';
 import Expenses from './Expenses';
