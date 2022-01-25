@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ExpensesFilter from './ExpensesFilter';
 import NewExpense from './NewExpense';
 import Expenses from './Expenses';
 
@@ -42,6 +42,7 @@ const App = () => {
 
   return (
     <div>
+      <ExpensesFilter />
       <NewExpense onAddExpense={addExpenseDataHandler} />
       <Expenses items={expenses} />
     </div>
