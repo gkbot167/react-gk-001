@@ -25,6 +25,13 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
+  const addExpenseDataHandler = (enteredexpensedata) => {
+    const expenseData = {
+      ...enteredexpensedata,
+      //id: Math.random().toString(),
+    };
+    console.log(expenseData);
+  };
 
   // return React.createElement(
   //   'div',
@@ -35,7 +42,7 @@ const App = () => {
 
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseDataHandler} />
       <Expenses items={expenses} />
     </div>
   );
