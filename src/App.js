@@ -1,4 +1,4 @@
-import React from './react';
+import React from 'react';
 import ExpensesFilter from './ExpensesFilter';
 import NewExpense from './NewExpense';
 import Expenses from './Expenses';
@@ -42,8 +42,11 @@ const App = () => {
 
   return (
     <div>
-      <ExpensesFilter />
       <NewExpense onAddExpense={addExpenseDataHandler} />
+      <div>
+        <ExpensesFilter />
+        <ExpenseMonthShower />
+      </div>
       <Expenses items={expenses} />
       <ExpenseMonthShower />
     </div>
