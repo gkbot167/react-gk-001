@@ -1,6 +1,4 @@
 import React from 'react';
-import { MDBContainer } from 'mdbreact';
-import { HorizontalBar } from 'react-chartjs-2';
 const ExpenseMonthShowerTube = () => {
   const data = {
     labels: [
