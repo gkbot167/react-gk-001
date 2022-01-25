@@ -4,7 +4,6 @@ const ExpenseMonthShower = () => {
   return (
     <div>
       <div>
-        <label>Jan</label>
         <ExpenseMonthShowerTube />
       </div>
       <div>
