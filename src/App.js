@@ -2,7 +2,7 @@ import React from 'react';
 import ExpensesFilter from './ExpensesFilter';
 import NewExpense from './NewExpense';
 import Expenses from './Expenses';
-
+import ExpenseMonthShower from './ExpenseMonthShower';
 const App = () => {
   const expenses = [
     {
@@ -45,6 +45,7 @@ const App = () => {
       <ExpensesFilter />
       <NewExpense onAddExpense={addExpenseDataHandler} />
       <Expenses items={expenses} />
+      <ExpenseMonthShower />
     </div>
   );
 };
