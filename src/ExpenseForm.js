@@ -25,33 +25,25 @@ const ExpenseForm = () => {
     setEnteredDate(event.target.value);
     //setUserInput({ ...userInput, enteredDate: event.target.value });
   };
-  const saveExpenseDataHandler_1 = (expensesData) => {
-    const expensesData_1 = {
-      ...expensesData,
-      id: Math.random().toString(),
-    };
-    console.log(expensesData_1);
-  };
+
   const submitHandler = (event) => {
     event.preventDefault();
 
     const expensesData = {
       title: enteredTitle,
       amount: enteredAmount,
-      date: enteredDate,
+      date: new Date(enteredDate),
     };
 
     console.log(expensesData);
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
-    props.saveExpenseDataHandler(expensesData);
-    this.props.saveExpenseDataHandler_1(expensesData);
   };
   return (
-    <form onSubmit={submitHandler} onSubmit={saveExpenseDataHandler_1}>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
-        <div className="new-expense__controls ">
+        <div className="new-expense__control ">
           <label>Title</label>
           <div>
             <input
@@ -61,7 +53,7 @@ const ExpenseForm = () => {
             ></input>
           </div>
         </div>
-        <div className="new-expense__controls">
+        <div className="new-expense__control">
           <label>Amount</label>
           <div>
             <input
@@ -73,7 +65,7 @@ const ExpenseForm = () => {
             ></input>
           </div>
         </div>
-        <div className="new-expense__controls">
+        <div className="new-expense__control">
           <label>Date</label>
           <div>
             <input
