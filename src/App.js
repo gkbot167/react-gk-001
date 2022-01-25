@@ -45,7 +45,7 @@ const App = () => {
       <NewExpense onAddExpense={addExpenseDataHandler} />
       <div>
         <ExpensesFilter />
-        <ExpenseMonthShowerTube />
+        <ExpenseMonthShowerTube onGiveExpenseToTube={addExpenseDataHandler} />
       </div>
       <Expenses items={expenses} />
     </div>

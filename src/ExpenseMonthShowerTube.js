@@ -1,5 +1,6 @@
 import React from 'react';
-const ExpenseMonthShowerTube = () => {
+import { Bar, HorizontalBar } from 'react-chartjs-2';
+const ExpenseMonthShowerTube = (props) => {
   const data = {
     labels: [
       'Jan',
@@ -18,7 +19,7 @@ const ExpenseMonthShowerTube = () => {
     datasets: [
       {
         label: 'Hours Studied in Geeksforgeeks',
-        data: [2, 5, 7, 9, 7, 6, 4, 0, 0, 0, 0, 0],
+        data: props.Amount,
         fill: true,
         backgroundColor: 'rgba(6, 156,51, .3)',
         borderColor: '#02b844',
@@ -26,9 +27,9 @@ const ExpenseMonthShowerTube = () => {
     ],
   };
   return (
-    <MDBContainer>
-      <HorizontalBar data={data} />
-    </MDBContainer>
+    <div>
+      <Bar data={data} width={'1px'} height={'1px'} />
+    </div>
   );
 };
 export default ExpenseMonthShowerTube;
