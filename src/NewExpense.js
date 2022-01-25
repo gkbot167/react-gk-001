@@ -8,11 +8,13 @@ const NewExpense = () => {
       id: Math.random().toString(),
     };
     console.log(expensesData);
+    return (
+      <div className="new-expense">
+        <ExpenseForm
+          saveExpenseDataHandler={saveExpenseDataHandler}
+        ></ExpenseForm>
+      </div>
+    );
   };
-  return (
-    <div className="new-expense">
-      <ExpenseForm onSaveExpensesData={saveExpenseDataHandler}></ExpenseForm>
-    </div>
-  );
+  export default NewExpense;
 };
-export default NewExpense;

@@ -21,6 +21,7 @@ export default function App() {
     },
   ];
   console.log(Expense_gk);
+
   return (
     <div>
       <NewExpense />
