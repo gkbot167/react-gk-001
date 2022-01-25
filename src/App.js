@@ -2,7 +2,7 @@ import React from 'react';
 import ExpensesFilter from './ExpensesFilter';
 import NewExpense from './NewExpense';
 import Expenses from './Expenses';
-import ExpenseMonthShower from './ExpenseMonthShower';
+import ExpenseMonthShowerTube from './ExpenseMonthShowerTube';
 const App = () => {
   const expenses = [
     {
