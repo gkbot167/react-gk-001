@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ExpenseMonthShowerTube from './ExpenseMonthShowerTube';
 import './ExpenseForm.css';
 
 const ExpenseForm = (props) => {
@@ -54,6 +53,9 @@ const ExpenseForm = (props) => {
     setEnteredAmount('');
     setEnteredDate('');
   };
+  const closeHandler = () => {
+    props.onStartEditHandle(items)
+  };
 
   return (
     <form onSubmit={submitHandler}>
@@ -89,6 +91,9 @@ const ExpenseForm = (props) => {
       </div>
       <div className="new-expense__actions">
         <button type="submit">Add Expense</button>
+        <button type="cancel" onClick={closeHandler} onChange={}>
+          Cancel
+        </button>
       </div>
     </form>
   );
