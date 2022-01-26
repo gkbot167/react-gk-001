@@ -1,5 +1,4 @@
 import React from 'react';
-import ExpensesFilter from './ExpensesFilter';
 import NewExpense from './NewExpense';
 import Expenses from './Expenses';
 import ExpenseMonthShowerTube from './ExpenseMonthShowerTube';
@@ -44,7 +43,6 @@ const App = () => {
     <div>
       <NewExpense onAddExpense={addExpenseDataHandler} />
       <div>
-        <ExpensesFilter />
         <ExpenseMonthShowerTube onGiveExpenseToTube={addExpenseDataHandler} />
       </div>
       <Expenses items={expenses} />

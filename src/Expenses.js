@@ -1,9 +1,14 @@
 import React from 'react';
+import ExpensesFilter from './ExpensesFilter';
 import ExpenseItem from './ExpenseItem';
 import './Expenses.css';
 const Expenses = (props) => {
+  const filterChangeHandler = (enteredYear) => {
+    console.log(enteredYear);
+  };
   return (
     <div className="expenses">
+      <ExpensesFilter onChangeFilter={filterChangeHandler} />
       <div className="">
         <ExpenseItem
           title={props.items[0].title}
