@@ -7,10 +7,10 @@ const Expenses = (props) => {
   console.log(FilteredYear);
   const filterChangeHandler = (enteredYear) => {
     setFilteredYear(enteredYear);
-    const FilteredExpense = props.items.filter((expenses) => {
-      return expenses.date.getFullYear().toString() === FilteredYear;
-    });
   };
+  const FilteredExpense = props.items.filter((expenses) => {
+    return expenses.date.getFullYear().toString() === FilteredYear;
+  });
   return (
     <div className="expenses">
       <ExpensesFilter
@@ -24,7 +24,8 @@ const Expenses = (props) => {
           amount={expenses.amount}
           date={expenses.date}
         />
-      )}
+      ))}
     </div>
-      );
+  );
+};
 export default Expenses;
