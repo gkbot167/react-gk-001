@@ -24,11 +24,13 @@ const D_expenses = [
 ];
 const App = () => {
   const [expenses, SetExpenses] = useState(D_expenses);
-  const addExpenseDataHandler = (expenses) => {
+  const addExpenseDataHandler = (expenseData) => {
+    console.log(expenseData);
     SetExpenses((prevExpense) => {
-      return [expenses, ...prevExpense];
+      return [expenseData, ...prevExpense];
     });
   };
+
   // return React.createElement(
   //   'div',
   //   {},
