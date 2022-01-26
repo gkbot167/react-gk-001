@@ -29,6 +29,7 @@ const App = () => {
     SetExpenses((prevExpense) => {
       return [expenseData, ...prevExpense];
     });
+    console.log(expenses);
   };
 
   // return React.createElement(
