@@ -24,10 +24,12 @@ const D_expenses = [
 ];
 const App = () => {
   const [expenses, SetExpenses] = useState(D_expenses);
-  const addExpenseDataHandler = (expenseData) => {
-    console.log(expenseData);
+  const addExpenseDataHandler = (expense) => {
+    console.log(expense);
+
     SetExpenses((prevExpense) => {
-      return [expenseData, ...prevExpense];
+      console.log(prevExpense);
+      return [expense, ...prevExpense];
     });
     console.log(expenses);
   };

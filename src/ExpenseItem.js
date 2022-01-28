@@ -3,7 +3,7 @@ import './Expense.css';
 import ExpenseDate from './ExpenseDate';
 const ExpenseItem = (props) => {
   const [title, setTitle] = useState(props.title);
-  //console.log(title);
+  console.log(title);
 
   const clickHandler = () => {
     setTitle('Updated');
